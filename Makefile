@@ -1,6 +1,7 @@
 all: er-example-server er-example-client
 # use this target explicitly if requried: er-plugtest-server
 
+CONTIKI_PROJECT=merkurboard-irrigation
 
 # variable for this Makefile
 # configure CoAP implementation (3|7|12|13) (er-coap-07 also supports CoAP draft 08)
@@ -11,7 +12,7 @@ UIP_CONF_IPV6=1
 # IPv6 make config disappeared completely
 CFLAGS += -DUIP_CONF_IPV6=1
 
-CONTIKI=../../..
+CONTIKI=osd-contiki
 CFLAGS += -DPROJECT_CONF_H=\"project-conf.h\"
 
 # variable for Makefile.include
